@@ -142,19 +142,28 @@ METHODS
     See "columns" in Handel::Storage for more information about this method.
 
   connection_info
-    Arguments: \%info
+    Arguments: \@info
 
     Gets/sets the connection information used when connecting to the
     database.
 
-        $storage->connection_info({
-            dsn => 'dbi:mysql:foo',
-            username => 'user',
-            password => 'pass'
-        });
+        $storage->connection_info(['dbi:mysql:foo', 'user', 'pass', {PrintError=>1}]);
 
-    See Rose::DB for more information about the available connection
-    attributes.
+    The info argument is an array ref that holds the following values:
+
+    $dsn
+        The DBI dsn to use to connect to.
+
+    $username
+        The username for the database you are connecting to.
+
+    $password
+        The password for the database you are connecting to.
+
+    \%attr
+        The attributes to be pass to DBI for this connection.
+
+    See DBI for more information about dsns and connection attributes.
 
   copyable_item_columns
     Returns a list of columns in the current item class that can be copied

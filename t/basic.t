@@ -1,16 +1,17 @@
 #!perl -wT
-# $Id: basic.t 1630 2006-12-18 01:25:18Z claco $
+# $Id: basic.t 1640 2006-12-21 17:30:58Z claco $
 use strict;
 use warnings;
 
 BEGIN {
     use lib 't/lib';
-    use Handel::Test tests => 12;
+    use Handel::Test tests => 13;
 
     use_ok('Handel::Iterator::RDBO');
     use_ok('Handel::Schema::RDBO::Cart');
     use_ok('Handel::Schema::RDBO::Cart::Item');
     use_ok('Handel::Schema::RDBO::DB');
+    use_ok('Handel::Schema::RDBO::Object');
     use_ok('Handel::Schema::RDBO::Order');
     use_ok('Handel::Schema::RDBO::Order::Item');
     use_ok('Handel::Storage::RDBO');

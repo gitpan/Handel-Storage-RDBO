@@ -1,11 +1,10 @@
-# $Id: Order.pm 1630 2006-12-18 01:25:18Z claco $
+# $Id: Order.pm 1640 2006-12-21 17:30:58Z claco $
 package Handel::Schema::RDBO::Order;
 use strict;
 use warnings;
 
 BEGIN {
-    use base qw/Rose::DB::Object/;
-    use Handel::Schema::RDBO::DB;
+    use base qw/Handel::Schema::RDBO::Object/;
     use DateTime;
 };
 
@@ -62,10 +61,6 @@ __PACKAGE__->meta->setup(
         }
     ]
 );
-
-sub init_db {
-    return Handel::Schema::RDBO::DB->new(domain => 'handel', type => 'bogus');
-};
 
 1;
 __END__

@@ -1,11 +1,10 @@
-# $Id: Item.pm 1620 2006-12-14 01:22:13Z claco $
+# $Id: Item.pm 1640 2006-12-21 17:30:58Z claco $
 package Handel::Schema::RDBO::Cart::Item;
 use strict;
 use warnings;
 
 BEGIN {
-    use base qw/Rose::DB::Object/;
-    use Handel::Schema::RDBO::DB;
+    use base qw/Handel::Schema::RDBO::Object/;
 };
 
 __PACKAGE__->meta->setup(
@@ -19,10 +18,6 @@ __PACKAGE__->meta->setup(
         description => {type => 'varchar', length => 255, default => undef, not_null => 0}
     ]
 );
-
-sub init_db {
-    return Handel::Schema::RDBO::DB->new(domain => 'handel', type => 'bogus');
-};
 
 1;
 __END__

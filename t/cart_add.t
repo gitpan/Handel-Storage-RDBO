@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: cart_add.t 1624 2006-12-14 04:35:28Z claco $
+# $Id: cart_add.t 1640 2006-12-21 17:30:58Z claco $
 use strict;
 use warnings;
 
@@ -23,6 +23,7 @@ BEGIN {
 
 ## This is a hack, but it works. :-)
 my $schema = Handel::Test->init_schema(no_populate => 1);
+$ENV{'HandelDBIDSN'} = $schema->dsn;
 
 &run('Handel::Test::RDBO::Cart', 'Handel::Test::RDBO::Cart::Item', 1);
 
@@ -30,7 +31,6 @@ sub run {
     my ($subclass, $itemclass, $dbsuffix) = @_;
 
     Handel::Test->populate_schema($schema, clear => 1);
-    local $ENV{'HandelDBIDSN'} = $schema->dsn;
 
 
     ## test for Handel::Exception::Argument where first param is not a hashref

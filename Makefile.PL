@@ -1,4 +1,4 @@
-# $Id: Makefile.PL 1637 2006-12-19 18:16:59Z claco $
+# $Id: Makefile.PL 1640 2006-12-21 17:30:58Z claco $
 use ExtUtils::MakeMaker;
 use strict;
 use warnings FATAL => 'all';
@@ -11,7 +11,7 @@ WriteMakefile(
     PL_FILES            => {},
     PREREQ_PM           => {
         'Handel'           => '1.0',
-        'Rose::DB'         => '0',
+        'Rose::DB'         => '0.732',
         'Rose::DB::Object' => '0',
         'Clone'            => '0',
         'Scalar::Util'     => '0'

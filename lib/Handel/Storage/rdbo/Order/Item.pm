@@ -1,4 +1,4 @@
-# $Id: Item.pm 1630 2006-12-18 01:25:18Z claco $
+# $Id: Item.pm 1639 2006-12-19 23:45:08Z claco $
 package Handel::Storage::RDBO::Order::Item;
 use strict;
 use warnings;
@@ -31,7 +31,7 @@ __END__
 
 =head1 NAME
 
-Handel::Storage::DBIC::Order::Item - RDBO storage configuration for Handel::Order::Item
+Handel::Storage::RDBO::Order::Item - RDBO storage configuration for Handel::Order::Item
 
 =head1 SYNOPSIS
 
