@@ -1,4 +1,4 @@
-# $Id: style_critic_core.rc 1624 2006-12-14 04:35:28Z claco $
+# $Id: style_critic_core.rc 1909 2007-06-23 21:05:35Z claco $
 # Remember to Id keyword our files
 [Miscellanea::RequireRcsKeywords]
 keywords = Id
@@ -50,7 +50,7 @@ allow = $@
 [-CodeLayout::ProhibitParensWithBuiltins]
 
 # Don't use it
-[-Editor::RequireEmacsFileVariables]
+#[-Editor::RequireEmacsFileVariables]
 
 # I agree, just not here.
-[-ValuesAndExpressions::ProhibitMagicNumbers]
+#[-ValuesAndExpressions::ProhibitMagicNumbers]

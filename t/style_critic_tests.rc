@@ -1,8 +1,0 @@
-# $Id: style_critic_tests.rc 1624 2006-12-14 04:35:28Z claco $
-# Remember to Id keyword our files
-[Miscellanea::RequireRcsKeywords]
-keywords = Id
-
-# use Handel::Test
-[TestingAndDebugging::RequireTestLabels]
-modules = Handel::Test

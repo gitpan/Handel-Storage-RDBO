@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: order_search.t 1632 2006-12-18 02:56:33Z claco $
+# $Id: order_search.t 1909 2007-06-23 21:05:35Z claco $
 use strict;
 use warnings;
 
@@ -351,7 +351,7 @@ sub run {
     is($order->shopper, '88888888-8888-8888-8888-888888888888');
     is($order->type, ORDER_TYPE_SAVED);
     is($order->count, 0);
-    is($order->subtotal, 0);
+    is($order->subtotal+0, 0);
     is(refaddr $order->result->storage, refaddr $storage, 'storage option used');
     is($altschema->resultset('Orders')->search({id => '88888888-8888-8888-8888-888888888888'})->count, 1, 'order found in alt storage');
     is($schema->resultset('Orders')->search({id => '88888888-8888-8888-8888-888888888888'})->count, 0, 'alt order not in class storage');

@@ -1,4 +1,4 @@
-# $Id: RDBO.pm 1620 2006-12-14 01:22:13Z claco $
+# $Id: RDBO.pm 1909 2007-06-23 21:05:35Z claco $
 package Handel::Iterator::RDBO;
 use strict;
 use warnings;

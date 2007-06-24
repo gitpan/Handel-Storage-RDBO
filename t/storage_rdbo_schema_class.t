@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: storage_rdbo_schema_class.t 1636 2006-12-19 17:41:40Z claco $
+# $Id: storage_rdbo_schema_class.t 1909 2007-06-23 21:05:35Z claco $
 use strict;
 use warnings;
 

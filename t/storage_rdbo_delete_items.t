@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: storage_rdbo_delete_items.t 1635 2006-12-19 03:33:01Z claco $
+# $Id: storage_rdbo_delete_items.t 1909 2007-06-23 21:05:35Z claco $
 use strict;
 use warnings;
 

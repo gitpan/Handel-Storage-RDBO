@@ -1,24 +1,28 @@
-# $Id: Makefile.PL 1640 2006-12-21 17:30:58Z claco $
-use ExtUtils::MakeMaker;
+# $Id: Makefile.PL 1910 2007-06-24 02:54:07Z claco $
 use strict;
-use warnings FATAL => 'all';
+use warnings;
+use inc::Module::Install 0.65;
 
-WriteMakefile(
-    NAME                => 'Handel::Storage::RDBO',
-    AUTHOR              => 'Christopher H. Laco <claco@chrislaco.com>',
-    VERSION_FROM        => 'lib/Handel/Storage/RDBO.pm',
-    ABSTRACT_FROM       => 'lib/Handel/Storage/RDBO.pm',
-    PL_FILES            => {},
-    PREREQ_PM           => {
-        'Handel'           => '1.0',
-        'Rose::DB'         => '0.732',
-        'Rose::DB::Object' => '0',
-        'Clone'            => '0',
-        'Scalar::Util'     => '0'
-    },
-    NO_META             => 1,
-    dist                => {
-        PREOP           => 'pod2text lib/Handel/Storage/RDBO.pm > $(DISTVNAME)/README',
-    },    
-    clean               => { FILES => 'Handel-Storage-RDBO-* t/var' },
-);
+name 'Handel-Storage-RDBO';
+license 'perl';
+perl_version '5.008001';
+all_from 'lib/Handel/Storage/RDBO.pm';
+
+requires 'Handel'           => '1.00000';
+requires 'Rose::Object'     => '0.84';
+requires 'Rose::DB'         => '0.734';
+requires 'Rose::DB::Object' => '0.764';
+requires 'Clone';
+requires 'Scalar::Util';
+
+build_requires 'Directory::Scratch';
+
+tests 't/*.t t/*/*.t';
+clean_files 't/var Handel-Storage-RDBO-*';
+
+eval {
+    system 'pod2text lib/Handel/Storage/RDBO.pm > README';
+};
+
+auto_install;
+WriteAll;

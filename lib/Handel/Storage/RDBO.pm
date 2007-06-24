@@ -1,10 +1,10 @@
-# $Id: RDBO.pm 1640 2006-12-21 17:30:58Z claco $
+# $Id: RDBO.pm 1910 2007-06-24 02:54:07Z claco $
 package Handel::Storage::RDBO;
 use warnings;
 use strict;
 use vars qw/$VERSION/;
 
-$VERSION = '0.01_02';
+$VERSION = '1.00000';
 
 BEGIN {
     use base qw/Handel::Storage/;
@@ -79,7 +79,7 @@ sub add_item {
 
     my $item;
     eval {
-        $item = $relationship->class->new(%{$data});
+        $item = $relationship->class->new(%{$data}, db => $result->storage_result->db);
         $item->save
     };
     if ($@) {
@@ -225,6 +225,7 @@ sub count_items {
     my $count = 0;
     eval {
         $count = Rose::DB::Object::Manager->get_objects_count(
+            db => $result->storage_result->db,            
             object_class => $relationship->class,
             query        => [%{$filter}]
         );
@@ -284,7 +285,7 @@ sub delete {
     };
 
     return $delete;
-};  
+};
 
 sub delete_items {
     my ($self, $result, $filter) = @_;
@@ -316,6 +317,7 @@ sub delete_items {
     my $delete;
     eval {
         $delete = Rose::DB::Object::Manager->delete_objects(
+            db => $result->storage_result->db,            
             object_class => $relationship->class,
             where        => [%{$filter}]
         );
@@ -465,6 +467,7 @@ sub search_items {
     my $resultset;
     eval {
         $resultset = Rose::DB::Object::Manager->get_objects(
+            db => $result->storage_result->db,
             object_class => $relationship->class,
             query        => [%{$filter}],
             %{$options}
@@ -555,6 +558,11 @@ sub _configure_schema_instance {
                 'inflate',
                 sub {
                     my ($row, $value) = @_;
+
+                    if (blessed $value && $value->isa('Data::Currency')) {
+                        $value =  $value->value;
+                    };
+
                     my $codecolumn = $self->can('currency_code_column')->($self);
                     my $storagecode = $self->can('currency_code')->($self);
                     my $code;

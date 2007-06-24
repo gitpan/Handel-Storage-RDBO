@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: order_destroy.t 1633 2006-12-18 04:07:10Z claco $
+# $Id: order_destroy.t 1909 2007-06-23 21:05:35Z claco $
 use strict;
 use warnings;
 
@@ -69,7 +69,7 @@ sub run {
 
         my $related_items = $order->count;
         is($related_items, 1);
-        is($order->subtotal, 5.55);
+        is($order->subtotal+0, 5.55);
         if ($subclass ne 'Handel::Order') {
             #is($order->custom, 'custom');
         };

@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: storage_rdbo_add_item.t 1635 2006-12-19 03:33:01Z claco $
+# $Id: storage_rdbo_add_item.t 1909 2007-06-23 21:05:35Z claco $
 use strict;
 use warnings;
 
@@ -41,7 +41,7 @@ isa_ok($item, $storage->result_class);
 is($item->id, '99999999-9999-9999-9999-999999999999', 'got id');
 is($item->sku, 'ABC-123', 'got sku');
 is($item->quantity, 2, 'got quantity');
-is($item->price, 2.22, 'got price');
+is($item->price+0, 2.22, 'got price');
 
 
 ## throw exception if no result is passed
