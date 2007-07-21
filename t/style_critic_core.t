@@ -1,5 +1,5 @@
 #!perl -w
-# $Id: style_critic_core.t 1909 2007-06-23 21:05:35Z claco $
+# $Id: /local/Handel-Storage-RDBO/trunk/t/style_critic_core.t 1793 2007-07-21T02:09:45.330687Z claco  $
 use strict;
 use warnings;
 
@@ -7,7 +7,7 @@ BEGIN {
     use lib 't/lib';
     use Handel::Test;
 
-    plan skip_all => 'set TEST_CRITIC or TEST_PRIVATE to enable this test' unless $ENV{TEST_CRITIC} || $ENV{TEST_PRIVATE};
+    plan skip_all => 'set TEST_AUTHOR to enable this test' unless $ENV{TEST_AUTHOR};
 
     eval 'use Test::Perl::Critic 0.08';
     plan skip_all => 'Test::Perl::Critic 0.08 not installed' if $@;

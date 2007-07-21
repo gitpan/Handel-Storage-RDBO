@@ -1,4 +1,4 @@
-# $Id: Cart.pm 1909 2007-06-23 21:05:35Z claco $
+# $Id: /local/Handel-Storage-RDBO/trunk/lib/Handel/Schema/RDBO/Cart.pm 1787 2007-06-23T21:05:35.855248Z claco  $
 package Handel::Schema::RDBO::Cart;
 use strict;
 use warnings;

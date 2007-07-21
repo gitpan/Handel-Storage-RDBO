@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: cart_restore.t 1909 2007-06-23 21:05:35Z claco $
+# $Id: /local/Handel-Storage-RDBO/trunk/t/cart_restore.t 1787 2007-06-23T21:05:35.855248Z claco  $
 use strict;
 use warnings;
 

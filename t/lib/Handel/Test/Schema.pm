@@ -1,22 +1,22 @@
-# $Id: Schema.pm 1909 2007-06-23 21:05:35Z claco $
+# $Id: /local/Handel-Storage-RDBO/trunk/t/lib/Handel/Test/Schema.pm 1793 2007-07-21T02:09:45.330687Z claco  $
 package Handel::Test::Schema;
 use strict;
 use warnings;
 
 BEGIN {
     use base qw/DBIx::Class::Schema/;
-    use Handel::Schema::Cart;
-    use Handel::Schema::Cart::Item;
-    use Handel::Schema::Order;
-    use Handel::Schema::Order::Item;
+    use Handel::Schema::DBIC::Cart;
+    use Handel::Schema::DBIC::Cart::Item;
+    use Handel::Schema::DBIC::Order;
+    use Handel::Schema::DBIC::Order::Item;
 };
 
 ## All 4 classes aren't usually loaded together so we'll do this to avoid both
 ## sources named 'Items'
-__PACKAGE__->register_class('Carts', 'Handel::Schema::Cart');
-__PACKAGE__->register_class('CartItems', 'Handel::Schema::Cart::Item');
-__PACKAGE__->register_class('Orders', 'Handel::Schema::Order');
-__PACKAGE__->register_class('OrderItems', 'Handel::Schema::Order::Item');
+__PACKAGE__->register_class('Carts', 'Handel::Schema::DBIC::Cart');
+__PACKAGE__->register_class('CartItems', 'Handel::Schema::DBIC::Cart::Item');
+__PACKAGE__->register_class('Orders', 'Handel::Schema::DBIC::Order');
+__PACKAGE__->register_class('OrderItems', 'Handel::Schema::DBIC::Order::Item');
 
 sub dsn {
     return shift->storage->connect_info->[0];

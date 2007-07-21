@@ -1,4 +1,4 @@
-# $Id: Makefile.PL 1910 2007-06-24 02:54:07Z claco $
+# $Id: /local/Handel-Storage-RDBO/trunk/Makefile.PL 1788 2007-06-24T02:54:07.059303Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
