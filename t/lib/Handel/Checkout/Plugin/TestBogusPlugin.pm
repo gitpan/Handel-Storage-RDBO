@@ -1,4 +1,4 @@
-# $Id: /local/Handel-Storage-RDBO/trunk/t/lib/Handel/Checkout/Plugin/TestBogusPlugin.pm 1788 2007-06-24T02:54:07.059303Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/t/lib/Handel/Checkout/Plugin/TestBogusPlugin.pm 1243 2008-01-20T04:05:18.816539Z claco  $
 package Handel::Checkout::Plugin::TestBogusPlugin;
 use strict;
 use warnings;

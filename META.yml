@@ -1,10 +1,11 @@
 --- 
 abstract: RDBO storage layer for Handel 1.x
-author: Christopher H. Laco
+author: 
+  - Christopher H. Laco
 build_requires: 
   Directory::Scratch: 0
 distribution_type: module
-generated_by: Module::Install version 0.67
+generated_by: Module::Install version 0.68
 license: perl
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
@@ -23,4 +24,4 @@ requires:
   Scalar::Util: 0
   perl: 5.8.1
 tests: t/*.t t/*/*.t
-version: 1.00001
+version: 1.00002

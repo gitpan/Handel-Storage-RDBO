@@ -78,6 +78,7 @@ t/lib/Handel/TestPipeline/ValidateError.pm
 t/lib/Handel/TestPipeline/WriteToStash.pm
 t/lib/Handel/TestPlugins/First.pm
 t/manifest.t
+t/meta.t
 t/order_add.t
 t/order_clear.t
 t/order_create.t

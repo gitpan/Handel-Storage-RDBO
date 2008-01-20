@@ -1,4 +1,6 @@
-# $Id: /local/Handel-Storage-RDBO/trunk/t/style_critic_core.rc 1787 2007-06-23T21:05:35.855248Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/t/style_critic_core.rc 1244 2008-01-20T04:51:14.962258Z claco  $
+[-Subroutines::RequireArgUnpacking]
+
 # Remember to Id keyword our files
 [Miscellanea::RequireRcsKeywords]
 keywords = Id

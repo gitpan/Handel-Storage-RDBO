@@ -1,10 +1,10 @@
-# $Id: /local/Handel-Storage-RDBO/trunk/lib/Handel/Storage/RDBO.pm 1793 2007-07-21T02:09:45.330687Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/lib/Handel/Storage/RDBO.pm 1244 2008-01-20T04:51:14.962258Z claco  $
 package Handel::Storage::RDBO;
 use warnings;
 use strict;
 use vars qw/$VERSION/;
 
-$VERSION = '1.00001';
+$VERSION = '1.00002';
 
 BEGIN {
     use base qw/Handel::Storage/;

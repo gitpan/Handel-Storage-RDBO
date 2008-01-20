@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/Handel-Storage-RDBO/trunk/t/pod_syntax.t 1793 2007-07-21T02:09:45.330687Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/t/pod_syntax.t 1243 2008-01-20T04:05:18.816539Z claco  $
 use strict;
 use warnings;
 

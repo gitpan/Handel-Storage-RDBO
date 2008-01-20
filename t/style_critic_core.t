@@ -1,5 +1,5 @@
 #!perl -w
-# $Id: /local/Handel-Storage-RDBO/trunk/t/style_critic_core.t 1793 2007-07-21T02:09:45.330687Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/t/style_critic_core.t 1243 2008-01-20T04:05:18.816539Z claco  $
 use strict;
 use warnings;
 

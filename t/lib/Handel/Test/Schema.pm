@@ -1,4 +1,4 @@
-# $Id: /local/Handel-Storage-RDBO/trunk/t/lib/Handel/Test/Schema.pm 1793 2007-07-21T02:09:45.330687Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/t/lib/Handel/Test/Schema.pm 1243 2008-01-20T04:05:18.816539Z claco  $
 package Handel::Test::Schema;
 use strict;
 use warnings;

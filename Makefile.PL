@@ -1,4 +1,4 @@
-# $Id: /local/Handel-Storage-RDBO/trunk/Makefile.PL 1788 2007-06-24T02:54:07.059303Z claco  $
+# $Id: /local/CPAN/Handel-Storage-RDBO/Makefile.PL 1244 2008-01-20T04:51:14.962258Z claco  $
 use strict;
 use warnings;
 use inc::Module::Install 0.65;
@@ -8,12 +8,13 @@ license 'perl';
 perl_version '5.008001';
 all_from 'lib/Handel/Storage/RDBO.pm';
 
+requires 'Clone';
 requires 'Handel'           => '1.00000';
-requires 'Rose::Object'     => '0.84';
 requires 'Rose::DB'         => '0.734';
 requires 'Rose::DB::Object' => '0.764';
-requires 'Clone';
+requires 'Rose::Object'     => '0.84';
 requires 'Scalar::Util';
+
 
 build_requires 'Directory::Scratch';
 
