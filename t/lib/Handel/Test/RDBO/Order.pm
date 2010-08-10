@@ -1,4 +1,4 @@
-# $Id: /local/CPAN/Handel-Storage-RDBO/t/lib/Handel/Test/RDBO/Order.pm 1243 2008-01-20T04:05:18.816539Z claco  $
+# $Id$
 package Handel::Test::RDBO::Order;
 use strict;
 use warnings;

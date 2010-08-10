@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/CPAN/Handel-Storage-RDBO/t/order_destroy.t 1243 2008-01-20T04:05:18.816539Z claco  $
+# $Id$
 use strict;
 use warnings;
 
@@ -69,7 +69,7 @@ sub run {
 
         my $related_items = $order->count;
         is($related_items, 1);
-        is($order->subtotal+0, 5.55);
+        cmp_currency($order->subtotal+0, 5.55);
         if ($subclass ne 'Handel::Order') {
             #is($order->custom, 'custom');
         };

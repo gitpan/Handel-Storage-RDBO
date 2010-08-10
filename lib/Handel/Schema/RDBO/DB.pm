@@ -1,4 +1,4 @@
-# $Id: /local/CPAN/Handel-Storage-RDBO/lib/Handel/Schema/RDBO/DB.pm 1243 2008-01-20T04:05:18.816539Z claco  $
+# $Id$
 ## no critic (ProhibitPostfixControls, ProhibitExcessComplexity)
 package Handel::Schema::RDBO::DB;
 use strict;

@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/CPAN/Handel-Storage-RDBO/t/cart_destroy.t 1243 2008-01-20T04:05:18.816539Z claco  $
+# $Id$
 use strict;
 use warnings;
 
@@ -71,7 +71,7 @@ sub run {
 
         my $related_items = $cart->count;
         is($related_items, 1, 'has 1 item');
-        is($cart->subtotal+0, 9.99, 'subtotal is 9.99');
+        cmp_currency($cart->subtotal+0, 9.99, 'subtotal is 9.99');
 
         $cart->destroy;
 

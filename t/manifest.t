@@ -1,5 +1,5 @@
 #!perl -wT
-# $Id: /local/CPAN/Handel-Storage-RDBO/t/manifest.t 1244 2008-01-20T04:51:14.962258Z claco  $
+# $Id$
 use strict;
 use warnings;
 

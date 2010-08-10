@@ -1,4 +1,4 @@
-# $Id: /local/CPAN/Handel-Storage-RDBO/t/style_critic_core.rc 1244 2008-01-20T04:51:14.962258Z claco  $
+# $Id$
 [-Subroutines::RequireArgUnpacking]
 
 # Remember to Id keyword our files
